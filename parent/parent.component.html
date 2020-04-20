@@ -1,0 +1,38 @@
+<h1>wanna login?</h1>
+<div class = "form">
+<div *ngIf = "!logged" class = "login">
+    <div>
+        <input type='text' [(ngModel)]="login" id="login" placeholder = "login" required class="inp">
+    </div>
+    <div>
+        <input type='text' [(ngModel)]="password" id="pw" placeholder = "password" required class = "inp">
+    </div>
+    <div id="btn">
+        <button (click)="auth()" class="btn btn-dark">login</button>
+    </div>
+</div>
+
+<div *ngIf = "!registered" class = "signup">
+    <div>
+        <input type='text' [(ngModel)]="reglogin" id="reg_login" placeholder = "login" required class = "inp">
+    </div>
+    <div>
+        <input type='text' [(ngModel)]="name" id="name" placeholder = "name" required class = "inp">
+    </div>
+    <div>
+        <input type='text' [(ngModel)]="phone" id="phone" placeholder = "phone" required class = "inp">
+    </div>
+    <div>
+        <input type='text' [(ngModel)]="regpassword" id="reg_pw" placeholder = "password" required class = "inp">
+    </div>
+    <div id="btn">
+        <button (click)="register()" class="btn btn-dark">register</button>
+    </div>
+</div>
+
+<div *ngIf="logged">
+    <div>
+        <button (click)="logout()" class="btn btn-dark">logout</button>
+    </div>
+</div>
+</div>
